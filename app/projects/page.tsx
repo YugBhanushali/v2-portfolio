@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import { FiFolder } from "react-icons/fi";
 import Link from "next/link";
 import { Project, projects } from "../utils/constants";
+import { RiFolder2Line } from "react-icons/ri";
 
 export function ProjectItem({
   project,
@@ -22,7 +23,7 @@ export function ProjectItem({
       whileHover={{ x: 5 }}
     >
       <h3 className="text-sm font-semibold mb-0 flex items-center gap-2">
-        <FiFolder className="text-gray-400" />
+        <RiFolder2Line className="text-gray-400" />
         <span className="underline underline-offset-2">{project.title}</span>
       </h3>
       <p className="text-gray-400 text-xsm mb-2 text-sm">

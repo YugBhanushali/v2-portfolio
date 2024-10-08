@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import React from "react";
 import { motion } from "framer-motion";
 import {
@@ -10,7 +11,11 @@ import {
   RiBookOpenLine,
 } from "react-icons/ri";
 
-const Footer = () => {
+export default function Footer() {
+  const pathname = "/" + usePathname().split("/")[1];
+
+  console.log(pathname);
+
   const navItems = [
     { href: "/", icon: RiHome4Line, label: "Home" },
     { href: "/work", icon: RiBriefcase2Line, label: "Work" },
@@ -32,14 +37,22 @@ const Footer = () => {
               whileHover={{ y: -2 }}
               whileTap={{ scale: 0.95 }}
             >
-              <item.icon className="w-5 h-5 mb-1" />
-              {/* <span className="text-xs">{item.label}</span> */}
+              <item.icon className="w-6 h-6 mb-1" />
+              {pathname === item.href && (
+                <motion.div
+                  className="w-1 h-1 bg-blue-600 dark:bg-blue-400 rounded-full"
+                  layoutId="dot"
+                  transition={{
+                    type: "spring",
+                    stiffness: 500,
+                    damping: 30,
+                  }}
+                />
+              )}
             </motion.div>
           </Link>
         ))}
       </nav>
     </footer>
   );
-};
-
-export default Footer;
+}

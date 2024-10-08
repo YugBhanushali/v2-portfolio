@@ -51,9 +51,6 @@ const Header = () => {
       <header className="p-4 flex justify-between items-center">
         <h1 className="text-md">Yug Bhanushali / {getBreadcrumb()}</h1>
         <div className="flex items-center space-x-4">
-          <div className="text-md" suppressHydrationWarning>
-            {getTimeString() + " IST"}
-          </div>
           <button
             onClick={() => {
               setTheme(darkMode ? "light" : "dark");
@@ -70,6 +67,9 @@ const Header = () => {
               <RiMoonLine className="w-5 h-5" />
             )}
           </button>
+          <div className="text-md" suppressHydrationWarning>
+            {getTimeString() + " IST"}
+          </div>
         </div>
       </header>
       <div className="w-full h-px bg-gray-200 dark:bg-gray-700 transition-colors duration-300"></div>

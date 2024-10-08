@@ -8,7 +8,7 @@ export default function Home() {
   return (
     <div className="flex flex-col w-[50%] p-5 mt-5">
       <div>
-        <div className="flex w-full text-[16px] font-thin text-justify">
+        <div className="flex w-full text-[16px]  text-justify">
           Hey 👋 I’m Yug!. A developer who loves to build stuff that matters.
           Loves to scroll and learn on X.is simply dummy text of the printing
           and typesetting industry. Lorem Ipsum has been the industry's standard
