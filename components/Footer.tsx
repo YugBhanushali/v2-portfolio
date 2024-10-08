@@ -9,6 +9,7 @@ import {
   RiBriefcase2Line,
   RiFolder2Line,
   RiBookOpenLine,
+  RiLinkM,
 } from "react-icons/ri";
 
 export default function Footer() {
@@ -21,6 +22,7 @@ export default function Footer() {
     { href: "/work", icon: RiBriefcase2Line, label: "Work" },
     { href: "/projects", icon: RiFolder2Line, label: "Projects" },
     { href: "/blogs", icon: RiBookOpenLine, label: "Blogs" },
+    { href: "/socials", icon: RiLinkM, label: "Socials" },
   ];
 
   return (

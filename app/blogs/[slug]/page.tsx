@@ -3,7 +3,6 @@ import path from "path";
 import matter from "gray-matter";
 import React from "react";
 import { RiCalendarLine, RiTimeLine, RiUser3Line } from "react-icons/ri";
-import Link from "next/link";
 import { unified } from "unified";
 import remarkParse from "remark-parse";
 import remarkRehype from "remark-rehype";
@@ -92,7 +91,7 @@ const BlogPage = async ({ params }: { params: { slug: string } }) => {
         dangerouslySetInnerHTML={{ __html: renderedContent }}
       ></article>
 
-      <footer className="my-8">
+      {/* <footer className="my-8">
         <h2 className="text-2xl font-semibold mb-4">Suggested Blogs</h2>
         <ul>
           {suggestedPosts.map((post) => (
@@ -103,7 +102,7 @@ const BlogPage = async ({ params }: { params: { slug: string } }) => {
             </li>
           ))}
         </ul>
-      </footer>
+      </footer> */}
     </div>
   );
 };

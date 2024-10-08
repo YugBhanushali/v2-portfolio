@@ -110,16 +110,20 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        light: "#F0F0F0", // Light mode background
-        dark: "#151b23", // Dark mode background
-        darkCode: "#181818", // Dark mode background
+        black: "#121212",
+        light: "#f5f5f5",
+        dark: "#181818",
         primary: {
-          light: "#1a73e8", // Custom primary color for light mode
-          dark: "#8ab4f8", // Custom primary color for dark mode
+          light: "#1a73e8",
+          dark: "#8ab4f8",
         },
         text: {
-          light: "#333", // Text color for light mode
-          dark: "#e5e5e5", // Text color for dark mode
+          light: "#333",
+          dark: "#e5e5e5",
+        },
+        codeBg: {
+          light: "#f0f0f0", // Light mode background for code
+          dark: "#1e1e1e", // Dark mode background for code
         },
       },
       typography: (theme) => ({
@@ -141,17 +145,18 @@ module.exports = {
             },
             code: {
               color: theme("colors.primary.light"),
-              backgroundColor: theme("colors.light"),
+              backgroundColor: theme("colors.codeBg.light"),
               padding: "2px 4px",
               borderRadius: "4px",
             },
             "code::before": false,
             "code::after": false,
             pre: {
-              backgroundColor: theme("colors.dark"),
-              color: theme("colors.light"),
+              backgroundColor: theme("colors.codeBg.light"),
+              color: theme("colors.text.light"),
               borderRadius: "8px",
               padding: "1rem",
+              overflowX: "auto", // Horizontal scroll if content is too long
             },
           },
         },
@@ -175,17 +180,19 @@ module.exports = {
             },
             code: {
               color: theme("colors.primary.dark"),
-              backgroundColor: theme("colors.dark"),
-              padding: "8px 8px",
+              backgroundColor: theme("colors.codeBg.dark"),
+              padding: "2px 4px",
               borderRadius: "4px",
+              overflowX: "auto",
             },
             "code::before": false,
             "code::after": false,
             pre: {
-              backgroundColor: theme("colors.dark"),
-              color: theme("colors.dark"),
+              backgroundColor: theme("colors.codeBg.dark"),
+              color: theme("colors.text.dark"),
               borderRadius: "8px",
               padding: "1rem",
+              overflowX: "auto",
             },
           },
         },

@@ -36,11 +36,11 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <main className={`flex flex-col p-5 ${inter.className}`}>
-            <div className="flex justify-center items-center">
+            <div className="flex justify-center items-center mb-10">
               <Header />
             </div>
             <div className="flex justify-center items-center">{children}</div>
-            <div>
+            <div className="mt-10">
               <Footer />
             </div>
           </main>

@@ -23,10 +23,10 @@ export function ProjectItem({
       whileHover={{ x: 5 }}
     >
       <h3 className="text-sm font-semibold mb-0 flex items-center gap-2">
-        <RiFolder2Line className="text-gray-400" />
+        <RiFolder2Line className="text-gray-600 dark:text-gray-400 text-lg" />
         <span className="underline underline-offset-2">{project.title}</span>
       </h3>
-      <p className="text-gray-400 text-xsm mb-2 text-sm">
+      <p className="text-gray-500 text-xsm mb-2 dark:text-gray-400 text-sm">
         {project.description}
       </p>
       <div className="flex flex-wrap gap-1 mb-3">
@@ -64,7 +64,7 @@ export function ProjectItem({
 }
 export default function Page() {
   return (
-    <main className="flex flex-col items-start justify-start p-5">
+    <main className="flex flex-col items-start justify-start p-5 max-w-[50%]">
       <div>
         {projects.map((project, index) => (
           <ProjectItem key={index} project={project} index={index} />

@@ -7,8 +7,6 @@ readTime: "6 min read"
 tags: ["Nginx", "SSL", "Bash Scripts", "Certbot", "Automation"]
 ---
 
-## Automating Nginx and SSL Setup with `Bash Scripts`
-
 Setting up Nginx and SSL for your server can be a tedious task if done manually. Thankfully, with a bit of automation, you can easily streamline the process using Bash scripts. In this blog, I'll walk you through two simple Bash scripts: one for configuring Nginx and another for setting up SSL using Certbot. These scripts will make your life easier by automating the setup process, so you can focus more on development rather than server management.
 
 ### Script 1: Automate Nginx Configuration

@@ -59,13 +59,15 @@ function WorkExperienceItem({
           {experience.company}
         </span>
       </h3>
-      <p className="text-gray-300 text-sm mb-1">{experience.role}</p>
-      <p className="text-gray-500 text-xs mb-1">
-        {formatDate(experience.startDate)} -{" "}
-        {experience.currentlyWorking
-          ? "Present"
-          : formatDate(experience.endDate!)}
-      </p>
+      <div className="flex justify-between">
+        <p className="text-gray-500 text-sm mb-1">{experience.role}</p>
+        <p className="text-gray-500 text-sm mb-1">
+          {formatDate(experience.startDate)} -{" "}
+          {experience.currentlyWorking
+            ? "Present"
+            : formatDate(experience.endDate!)}
+        </p>
+      </div>
       <p className="text-gray-400 text-xsm mb-2 text-sm">
         {experience.description}
       </p>
@@ -84,7 +86,7 @@ function WorkExperienceItem({
         target="_blank"
         rel="noopener noreferrer"
         className="flex items-center text-gray-400 hover:text-gray-300 text-sm"
-        whileHover={{ scale: 1.05 }}
+        whileHover={{ scale: 1.01 }}
       >
         <RiExternalLinkLine className="mr-1" />
         Company Website
