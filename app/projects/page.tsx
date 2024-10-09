@@ -1,11 +1,8 @@
 "use client";
-import { RiExternalLinkLine } from "react-icons/ri";
+import { RiExternalLinkLine, RiFolder2Line } from "react-icons/ri";
 import { TbBrandGithub } from "react-icons/tb";
 import { motion } from "framer-motion";
-import { FiFolder } from "react-icons/fi";
-import Link from "next/link";
 import { Project, projects } from "../utils/constants";
-import { RiFolder2Line } from "react-icons/ri";
 
 export function ProjectItem({
   project,
@@ -16,7 +13,7 @@ export function ProjectItem({
 }) {
   return (
     <motion.div
-      className="mb-2 pb-8"
+      className="mb-4 pb-6"
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.3, delay: index * 0.1 }}
@@ -26,7 +23,7 @@ export function ProjectItem({
         <RiFolder2Line className="text-gray-600 dark:text-gray-400 text-lg" />
         <span className="underline underline-offset-2">{project.title}</span>
       </h3>
-      <p className="text-gray-500 text-xsm mb-2 dark:text-gray-400 text-sm">
+      <p className="text-gray-500 text-xs md:text-sm mb-2 dark:text-gray-400">
         {project.description}
       </p>
       <div className="flex flex-wrap gap-1 mb-3">
@@ -62,9 +59,10 @@ export function ProjectItem({
     </motion.div>
   );
 }
+
 export default function Page() {
   return (
-    <main className="flex flex-col items-start justify-start p-5 max-w-[50%]">
+    <main className="flex flex-col items-start justify-star p-3 md:p-5 max-w-full md:max-w-[75%] lg:max-w-[50%] mx-auto">
       <div>
         {projects.map((project, index) => (
           <ProjectItem key={index} project={project} index={index} />

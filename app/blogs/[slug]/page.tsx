@@ -25,7 +25,7 @@ const getBlogPosts = () => {
   });
 };
 
-// This is the replacement for getStaticPaths (App Router version)
+// Generates static parameters (replaces getStaticPaths)
 export async function generateStaticParams() {
   const posts = getBlogPosts();
   return posts.map((post) => ({
@@ -33,7 +33,7 @@ export async function generateStaticParams() {
   }));
 }
 
-// Fetch and render the blog content dynamically (server-side)
+// Fetch and render a single blog post dynamically (server-side)
 const getBlogPost = (slug: string) => {
   const filePath = path.join(process.cwd(), "app", "content", `${slug}.md`);
   const fileContents = fs.readFileSync(filePath, "utf8");
@@ -47,42 +47,42 @@ const getBlogPost = (slug: string) => {
   return { frontMatter: data, content, suggestedPosts };
 };
 
-// Custom function to process markdown
+// Custom function to process markdown into HTML
 const renderMarkdown = async (content: string) => {
   const result = await unified()
-    .use(remarkParse) // Parses the markdown
-    .use(remarkRehype) // Converts remark (markdown) to rehype (HTML)
+    .use(remarkParse) // Parse markdown to AST
+    .use(remarkRehype) // Transform markdown AST to HTML AST
     .use(rehypePrettyCode, {
-      // Pretty code options for syntax highlighting
-      theme: "dracula", // You can change the theme
+      theme: "dracula", // Syntax highlighting theme
     })
-    .use(rehypeStringify) // Converts rehype tree (HTML) back to string
-    .process(content); // Processes the markdown content
+    .use(rehypeStringify) // Convert HTML AST to string
+    .process(content);
 
-  return result.toString(); // Returns the rendered HTML string
+  return result.toString(); // Returns the final HTML string
 };
 
+// BlogPage component for rendering individual blog posts
 const BlogPage = async ({ params }: { params: { slug: string } }) => {
   const { frontMatter, content, suggestedPosts } = getBlogPost(params.slug);
 
-  // Process the markdown content to HTML
+  // Convert markdown content to HTML
   const renderedContent = await renderMarkdown(content);
 
   return (
-    <div className="max-w-[50%] mx-auto p-4">
+    <div className="w-full mx-auto p-4 sm:w-full md:w-[70%] lg:w-[50%]">
       <header className="my-4">
         <h1 className="text-3xl font-bold">{frontMatter.title}</h1>
         <p className="text-gray-500 my-2 text-sm">{frontMatter.description}</p>
-        <div className="flex space-x-4 my-4  text-xs text-gray-500">
+        <div className="flex space-x-4 my-4 text-xs text-gray-500">
           <div className="flex items-center">
             <RiCalendarLine className="mr-1" /> {frontMatter.publishedDate}
           </div>
           <div className="flex items-center">
             <RiTimeLine className="mr-1" /> {frontMatter.readTime}
           </div>
-          <div className="flex items-center">
+          {/* <div className="flex items-center">
             <RiUser3Line className="mr-1" /> {frontMatter.author}
-          </div>
+          </div> */}
         </div>
       </header>
 
@@ -91,18 +91,21 @@ const BlogPage = async ({ params }: { params: { slug: string } }) => {
         dangerouslySetInnerHTML={{ __html: renderedContent }}
       ></article>
 
-      {/* <footer className="my-8">
-        <h2 className="text-2xl font-semibold mb-4">Suggested Blogs</h2>
-        <ul>
-          {suggestedPosts.map((post) => (
-            <li key={post.title} className="mb-2">
-              <Link href={`/blogs/${post.slug}`}>
-                <p className="text-blue-600 hover:underline">{post.title}</p>
-              </Link>
-            </li>
-          ))}
-        </ul>
-      </footer> */}
+      {/* Suggested Posts Section */}
+      {/* {suggestedPosts.length > 0 && (
+        <div className="mt-10">
+          <h3 className="text-xl font-semibold">Related Posts</h3>
+          <ul className="list-disc ml-5 mt-3">
+            {suggestedPosts.map((post) => (
+              <li key={post.slug}>
+                <a href={`/blogs/${post.slug}`} className="text-blue-500">
+                  {post.title}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+      )} */}
     </div>
   );
 };

@@ -45,7 +45,7 @@ export default async function BlogPage() {
   const blogPosts = getBlogPosts(); // Fetch blog post metadata
 
   return (
-    <main className="flex flex-col items-start justify-start p-5 max-w-2xl mx-auto">
+    <main className="flex flex-col items-start justify-start p-4 md:p-5 max-w-full md:max-w-2xl mx-auto">
       <div className="w-full">
         {blogPosts.map((post, index) => (
           <BlogPostItem key={post.id} post={post} index={index} />

@@ -39,6 +39,7 @@ export default function Header() {
   function getBreadcrumbs() {
     const pathSegments = pathname
       .split("/")
+      .slice(0, 2)
       .filter((segment) => segment !== "");
     let breadcrumbs = [{ name: "Yug Bhanushali", path: "/" }];
 
@@ -52,21 +53,25 @@ export default function Header() {
     return breadcrumbs;
   }
 
+  function truncateName(name: string, maxLength: number) {
+    return name.length > maxLength ? name.slice(0, maxLength) + "..." : name;
+  }
+
   return (
-    <div className="fixed top-0 flex-col w-[50%] bg-white dark:bg-black bg-opacity-70 dark:bg-opacity-70 backdrop-blur-md z-10 transition-colors duration-300">
-      <header className="p-4 flex justify-between items-center max-w-4xl mx-auto">
-        <nav>
-          <ul className="flex space-x-2 text-sm md:text-base">
+    <div className="fixed top-0  w-full sm:w-full md:w-[80%] lg:w-[50%] bg-white dark:bg-black bg-opacity-70 dark:bg-opacity-70 backdrop-blur-md z-10 transition-colors duration-300">
+      <header className="p-2 sm:p-4 sm:mx-0 mx-2 flex sm:flex justify-between items-center max-w-full ">
+        <nav className="ml-2">
+          <ul className="flex flex-wrap items-center justify-center sm:justify-start space-x-1 sm:space-x-2 text-xs sm:text-base">
             {getBreadcrumbs().map((breadcrumb, index) => (
-              <li key={breadcrumb.path}>
+              <li key={breadcrumb.path} className="flex items-center">
                 <Link
                   href={breadcrumb.path}
                   className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors duration-200"
                 >
-                  {breadcrumb.name}
+                  {truncateName(breadcrumb.name, 14)}
                 </Link>
                 {index < getBreadcrumbs().length - 1 && (
-                  <span className="mx-2 text-gray-400 dark:text-gray-600">
+                  <span className="mx-1 sm:mx-2 text-gray-400 dark:text-gray-600">
                     /
                   </span>
                 )}
@@ -74,7 +79,7 @@ export default function Header() {
             ))}
           </ul>
         </nav>
-        <div className="flex items-center space-x-4">
+        <div className="flex items-center space-x-2 sm:space-x-4">
           <button
             onClick={() => {
               setTheme(darkMode ? "light" : "dark");
@@ -86,12 +91,12 @@ export default function Header() {
             }
           >
             {darkMode ? (
-              <RiSunLine className="w-5 h-5" />
+              <RiSunLine className="w-4 h-4 sm:w-5 sm:h-5" />
             ) : (
-              <RiMoonLine className="w-5 h-5" />
+              <RiMoonLine className="w-4 h-4 sm:w-5 sm:h-5" />
             )}
           </button>
-          <div className="text-sm md:text-base" suppressHydrationWarning>
+          <div className="text-xs sm:text-base" suppressHydrationWarning>
             {getTimeString() + " IST"}
           </div>
         </div>
