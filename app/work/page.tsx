@@ -1,33 +1,86 @@
 "use client";
-import { RiExternalLinkLine } from "react-icons/ri";
+import {
+  RiBriefcase2Fill,
+  RiBriefcase2Line,
+  RiExternalLinkLine,
+} from "react-icons/ri";
 import { WorkExperience } from "../utils/constants";
 import { motion } from "framer-motion";
-import { FiBriefcase } from "react-icons/fi";
 
-const workExperiences: WorkExperience[] = [
+// const workExperiences: WorkExperience[] = [
+//   {
+//     company: "TechCorp",
+//     role: "Senior Frontend Developer",
+//     description:
+//       "Led the development of responsive web applications using React and Next.js. Implemented state-of-the-art UI/UX designs and improved overall performance.",
+//     websiteLink: "https://techcorp.com",
+//     startDate: "2021-06-01",
+//     endDate: null,
+//     currentlyWorking: true,
+//     technologies: ["React", "Next.js", "TypeScript", "GraphQL", "Tailwind CSS"],
+//   },
+//   {
+//     company: "InnoSoft",
+//     role: "Full Stack Engineer",
+//     description:
+//       "Developed and maintained full-stack applications using Node.js and React. Collaborated with cross-functional teams to deliver high-quality software solutions.",
+//     websiteLink: "https://innosoft.com",
+//     startDate: "2019-03-15",
+//     endDate: "2021-05-31",
+//     currentlyWorking: false,
+//     technologies: ["Node.js", "React", "Express", "MongoDB", "Docker"],
+//   },
+//   // Add more work experiences as needed
+// ];
+
+export const workExperiences: WorkExperience[] = [
   {
-    company: "TechCorp",
-    role: "Senior Frontend Developer",
-    description:
-      "Led the development of responsive web applications using React and Next.js. Implemented state-of-the-art UI/UX designs and improved overall performance.",
-    websiteLink: "https://techcorp.com",
-    startDate: "2021-06-01",
+    company: "Tracks and Towers Pvt Ltd",
+    role: "Full Stack Developer Intern",
+    description: `
+      Built scalable REST APIs with TypeScript and Node.js, integrating with Supabase (PostgreSQL).
+      Developed efficient UIs using Next.js, Shadcn, and Prisma, improving user experience by 40%.
+      Managed VPS hosting and Dockerized apps, ensuring 98% uptime.
+      Implemented CI/CD workflows, improving deployment speed by 70%.
+    `,
+    websiteLink: "https://tracksandtowers.com",
+    startDate: "March 2024",
     endDate: null,
     currentlyWorking: true,
-    technologies: ["React", "Next.js", "TypeScript", "GraphQL", "Tailwind CSS"],
+    technologies: [
+      "TypeScript",
+      "Node.js",
+      "Next.js",
+      "Supabase",
+      "Shadcn",
+      "NextAuth",
+      "Zod",
+      "Prisma",
+      "VPS",
+      "Docker",
+      "CI/CD",
+    ],
   },
   {
-    company: "InnoSoft",
-    role: "Full Stack Engineer",
-    description:
-      "Developed and maintained full-stack applications using Node.js and React. Collaborated with cross-functional teams to deliver high-quality software solutions.",
-    websiteLink: "https://innosoft.com",
-    startDate: "2019-03-15",
-    endDate: "2021-05-31",
+    company: "Healiom Inc",
+    role: "Frontend Developer Intern",
+    description: `
+      Developed patient portal using React.js, Redux, and Shadcn UI.
+      Integrated GetStream SDK for real-time chat.
+      Built responsive front-end components for high performance.
+    `,
+    websiteLink: "https://healiom.com",
+    startDate: "March 2024",
+    endDate: "May 2024",
     currentlyWorking: false,
-    technologies: ["Node.js", "React", "Express", "MongoDB", "Docker"],
+    technologies: [
+      "React.js",
+      "Redux",
+      "JavaScript",
+      "Shadcn UI",
+      "GetStream SDK",
+    ],
   },
-  // Add more work experiences as needed
 ];
 
 function WorkExperienceItem({
@@ -54,7 +107,7 @@ function WorkExperienceItem({
       whileHover={{ x: 5 }}
     >
       <h3 className="text-sm font-semibold mb-0 flex items-center gap-2">
-        <FiBriefcase className="text-gray-400" />
+        <RiBriefcase2Line className="text-gray-600 dark:text-gray-400 text-lg" />
         <span className="underline underline-offset-2">
           {experience.company}
         </span>
