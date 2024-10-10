@@ -1,9 +1,29 @@
+import {
+  RiMailLine,
+  RiTwitterXLine,
+  RiLinkedinLine,
+  RiGithubLine,
+  RiFileTextLine,
+  RiExternalLinkLine,
+} from "react-icons/ri";
+
 export interface Project {
   title: string;
   description: string;
   technologies: string[];
   liveLink: string;
   githubLink: string;
+}
+
+export interface BlogPost {
+  id: string;
+  title: string;
+  description: string;
+  tags: string[];
+  publishedDate: string;
+  readTime: string;
+  author: string;
+  link: string;
 }
 
 export const projects: Project[] = [
@@ -131,4 +151,58 @@ export const workExperiences: WorkExperience[] = [
       "GetStream SDK",
     ],
   },
+];
+
+export const skills = [
+  "JavaScript",
+  "TypeScript",
+  "Next.js",
+  "React",
+  "Node.js",
+  "Prisma",
+  "MySQL",
+  "PostgreSQL",
+  "MongoDB",
+  "Firebase",
+  "WebRTC",
+  "Redux",
+  "Python",
+  "Java",
+  "C",
+  "Tailwind CSS",
+  "Docker",
+  "AWS",
+  "Git",
+  "Linux",
+  "OOP",
+];
+
+export interface SocialLink {
+  name: string;
+  icon: React.ElementType;
+  href: string;
+}
+
+export const socialLinks: SocialLink[] = [
+  {
+    name: "Email",
+    icon: RiMailLine,
+    href: "mailto:yug.h.bhanushali1@gmail.com",
+  },
+  {
+    name: "Twitter",
+    icon: RiTwitterXLine,
+    href: "https://twitter.com/TheYug03",
+  },
+  {
+    name: "LinkedIn",
+    icon: RiLinkedinLine,
+    href: "https://www.linkedin.com/in/yug-bhanushali-b3b872224/",
+  },
+  {
+    name: "GitHub",
+    icon: RiGithubLine,
+    href: "https://github.com/YugBhanushali",
+  },
+  { name: "Resume", icon: RiFileTextLine, href: "/resume/resume.pdf" },
 ];

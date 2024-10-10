@@ -1,4 +1,3 @@
-import type { Metadata } from "next";
 import {
   Inter,
   Space_Mono,
@@ -10,6 +9,7 @@ import "./globals.css";
 import { ThemeProvider } from "../components/theme-provider";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import { Metadata } from "next";
 
 const inter = Roboto_Mono({
   subsets: ["latin"],
@@ -18,7 +18,23 @@ const inter = Roboto_Mono({
 
 export const metadata: Metadata = {
   title: "Yug Bhanushali",
-  description: "Building.....",
+  description: "Building innovative solutions and exploring new technologies.",
+  openGraph: {
+    title: "Yug Bhanushali",
+    description:
+      "Building innovative solutions and exploring new technologies.",
+    url: "https://yugbhanushali.com",
+    siteName: "Yug Bhanushali",
+    locale: "en_US",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Yug Bhanushali",
+    description:
+      "Building innovative solutions and exploring new technologies.",
+    site: "@yourtwitterhandle",
+  },
 };
 
 export default function RootLayout({

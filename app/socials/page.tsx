@@ -2,45 +2,20 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import {
-  RiMailLine,
-  RiTwitterXLine,
-  RiLinkedinLine,
-  RiGithubLine,
-  RiFileTextLine,
-  RiExternalLinkLine,
-} from "react-icons/ri";
-import Link from "next/link";
 
-interface SocialLink {
-  name: string;
-  icon: React.ElementType;
-  href: string;
-}
+import { Metadata } from "next";
+import { SocialLink, socialLinks } from "../utils/constants";
+import { RiExternalLinkLine } from "react-icons/ri";
 
-const socialLinks: SocialLink[] = [
-  {
-    name: "Email",
-    icon: RiMailLine,
-    href: "mailto:yug.h.bhanushali1@gmail.com",
+export const metadata: Metadata = {
+  title: "Socials - Yug Bhanushali",
+  description: "Connect with me on my social media platforms.",
+  openGraph: {
+    title: "Socials - Yug Bhanushali",
+    description: "Connect with me on my social media platforms.",
+    url: "https://yugbhanushali.com/socials",
   },
-  {
-    name: "Twitter",
-    icon: RiTwitterXLine,
-    href: "https://twitter.com/TheYug03",
-  },
-  {
-    name: "LinkedIn",
-    icon: RiLinkedinLine,
-    href: "https://www.linkedin.com/in/yug-bhanushali-b3b872224/",
-  },
-  {
-    name: "GitHub",
-    icon: RiGithubLine,
-    href: "https://github.com/YugBhanushali",
-  },
-  { name: "Resume", icon: RiFileTextLine, href: "/resume/resume.pdf" },
-];
+};
 
 function SocialLinkItem({ link, index }: { link: SocialLink; index: number }) {
   return (

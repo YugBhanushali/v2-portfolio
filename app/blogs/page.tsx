@@ -2,18 +2,20 @@ import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
 import BlogPostItem from "@/components/BlogPostItem";
+import { Metadata } from "next";
+import { BlogPost } from "../utils/constants";
 
-// Define a type for the blog post metadata
-interface BlogPost {
-  id: string;
-  title: string;
-  description: string;
-  tags: string[];
-  publishedDate: string;
-  readTime: string;
-  author: string;
-  link: string;
-}
+export const metadata: Metadata = {
+  title: "Blogs - Yug Bhanushali",
+  description:
+    "Read my latest blogs and articles on technology and development.",
+  openGraph: {
+    title: "Blogs - Yug Bhanushali",
+    description:
+      "Read my latest blogs and articles on technology and development.",
+    url: "https://yugbhanushali.com/blogs",
+  },
+};
 
 // Function to get all the blog post metadata from Markdown files
 const getBlogPosts = (): BlogPost[] => {

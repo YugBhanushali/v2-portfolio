@@ -1,5 +1,16 @@
 import { ProjectItem } from "@/components/ProjectItem";
 import { Project, projects } from "../utils/constants";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Projects - Yug Bhanushali",
+  description: "Explore my projects and contributions.",
+  openGraph: {
+    title: "Projects - Yug Bhanushali",
+    description: "Explore my projects and contributions.",
+    url: "https://yugbhanushali.com/projects",
+  },
+};
 
 export default function Page() {
   return (
