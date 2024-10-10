@@ -55,16 +55,16 @@ export const projects: Project[] = [
       "Socket.io",
       "WebRTC",
     ],
-    liveLink: "https://filedrop.com",
-    githubLink: "https://github.com/your-username/filedrop",
+    liveLink: "https://file-drops.vercel.app/",
+    githubLink: "https://github.com/YugBhanushali/FileDrop",
   },
   {
     title: "Code To Image",
     description:
       "Developed a tool enabling users to create visually appealing code snippets with customizable fonts, themes, and backgrounds. Featured on Product Hunt, ranked 48th of the day.",
     technologies: ["React.js", "Styled-Components", "Vercel"],
-    liveLink: "https://codetoimage.com",
-    githubLink: "https://github.com/your-username/codetoimage",
+    liveLink: "https://codetoimg.vercel.app/",
+    githubLink: "https://github.com/YugBhanushali/code-to-image",
   },
   {
     title: "Supabase Contribution",
@@ -72,39 +72,39 @@ export const projects: Project[] = [
       "Fixed a critical bug in Supabase documentation, improving the app's stability and preventing crashes when hovering over search results containing quotes.",
     technologies: ["TypeScript", "React.js"],
     liveLink: "https://supabase.com",
-    githubLink: "https://github.com/supabase",
+    githubLink: "https://github.com/supabase/supabase/pull/18302",
   },
   {
     title: "Event Hub",
     description:
       "Engineered a student event platform with secure club sign-in and intuitive event management features, including a card-based UI for event highlighting.",
     technologies: ["React.js", "Node.js", "MongoDB", "Express.js"],
-    liveLink: "https://eventhub.com",
-    githubLink: "https://github.com/your-username/eventhub",
+    liveLink: "hhttps://eventhubs.vercel.app/",
+    githubLink: "https://github.com/YugBhanushali/Event-Hub-Frontend",
   },
   {
     title: "KeyBeats",
     description:
       "Realistic mechanical keyboard sounds with 13 different switch profiles. A menubar application with adjustable volume control and an easy-to-use interface.",
     technologies: ["Electron.js", "JavaScript"],
-    liveLink: "https://keybeats.com",
-    githubLink: "https://github.com/your-username/keybeats",
+    liveLink: "https://github.com/YugBhanushali/keyBeats/releases/tag/1.1.3",
+    githubLink: "https://github.com/YugBhanushali/keyBeats",
   },
   {
     title: "WebWall",
     description:
       "Command-line tool to block and unblock websites by modifying the hosts file, providing efficient website access management.",
-    technologies: ["JavaScript"],
-    liveLink: "https://webwall.com",
-    githubLink: "https://github.com/your-username/webwall",
+    technologies: ["JavaScript", "npm-package"],
+    liveLink: "https://www.npmjs.com/package/webwall",
+    githubLink: "https://github.com/YugBhanushali/webwall",
   },
   {
     title: "ZipURL",
     description:
       "URL shortening service with customizable links, link management, click analytics, and QR code generation for easy sharing.",
     technologies: ["Next.js", "TypeScript", "PostgreSQL"],
-    liveLink: "https://zipurl.com",
-    githubLink: "https://github.com/your-username/zipurl",
+    liveLink: "https://zipurl.vercel.app/",
+    githubLink: "https://github.com/YugBhanushali/ZipURL",
   },
 ];
 

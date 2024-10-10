@@ -7,11 +7,11 @@ export default function Home() {
     <div className="flex flex-col w-full sm:w-[100%] md:w-[70%] lg:w-[50%] p-5 sm:p-2 md:p-4 lg:p-5 mt-3">
       <div>
         <div className="flex w-full text-[14px] sm:text-[16px] text-justify">
-          Hey 👋 I'm Yug!. A developer who loves to build stuff that matters.
-          Loves to scroll and learn on X. Lorem ipsum is simply dummy text of
-          the printing and typesetting industry. Lorem Ipsum has been the
-          industry's standard dummy text ever since the 1500s, when an unknown
-          printer took a galley.
+          Hey, I’m Yug! I’m a developer passionate about building impactful
+          solutions that enhance convenience and add value through tech and
+          code. When I’m not on projects, you can find me tinkering on X
+          (twitter), exploring the latest trends in financial tech (Fintech) and
+          startups. I’m dedicated to build products that make a difference.
         </div>
 
         {/* Skills section */}

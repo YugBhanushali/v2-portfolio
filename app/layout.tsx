@@ -1,17 +1,18 @@
 import {
   Inter,
-  Space_Mono,
   Space_Grotesk,
   Roboto_Mono,
   JetBrains_Mono,
   Work_Sans,
   Source_Code_Pro,
+  Inconsolata,
 } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "../components/theme-provider";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Metadata } from "next";
+import { GeistMono } from "geist/font";
 
 const inter = Source_Code_Pro({
   subsets: ["latin"],
@@ -45,14 +46,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={inter.className}>
+      <body className={GeistMono.className}>
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
           enableSystem
           disableTransitionOnChange
         >
-          <main className={`flex flex-col p-5 ${inter.className}`}>
+          <main className={`flex flex-col p-5`}>
             <div className="flex justify-center items-center mb-14">
               <Header />
             </div>
