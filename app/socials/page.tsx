@@ -36,7 +36,7 @@ function SocialLinkItem({ link, index }: { link: SocialLink; index: number }) {
 export default function SocialLinks() {
   return (
     <main className="flex flex-col items-center justify-center min-h-[70vh] p-5 mt-4">
-      <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3 w-full">
+      <div className="sm:grid gap-4 flex flex-col sm:justify-center sm:items-centers items-center justify-center md:grid-cols-2 lg:grid-cols-3 w-full">
         {socialLinks.map((link, index) => (
           <SocialLinkItem key={index} link={link} index={index} />
         ))}

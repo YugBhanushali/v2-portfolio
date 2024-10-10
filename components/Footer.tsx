@@ -20,8 +20,8 @@ export default function Footer() {
 
   const navItems = [
     { href: "/", icon: RiSquareLine, label: "Home" },
-    { href: "/work", icon: RiBriefcase2Line, label: "Work" },
     { href: "/projects", icon: RiFolder2Line, label: "Projects" },
+    { href: "/work", icon: RiBriefcase2Line, label: "Work" },
     { href: "/blogs", icon: RiBookOpenLine, label: "Blogs" },
     { href: "/socials", icon: RiLinkM, label: "Socials" },
   ];
