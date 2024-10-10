@@ -10,6 +10,7 @@ import {
   RiFolder2Line,
   RiBookOpenLine,
   RiLinkM,
+  RiSquareLine,
 } from "react-icons/ri";
 
 export default function Footer() {
@@ -18,7 +19,7 @@ export default function Footer() {
   console.log(pathname);
 
   const navItems = [
-    { href: "/", icon: RiHome4Line, label: "Home" },
+    { href: "/", icon: RiSquareLine, label: "Home" },
     { href: "/work", icon: RiBriefcase2Line, label: "Work" },
     { href: "/projects", icon: RiFolder2Line, label: "Projects" },
     { href: "/blogs", icon: RiBookOpenLine, label: "Blogs" },

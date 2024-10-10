@@ -45,7 +45,7 @@ export default function BlogPostItem({
         <p className="text-sm text-gray-600 dark:text-gray-400 mb-3">
           {post.description}
         </p>
-        <div className="flex flex-wrap gap-2 mb-3">
+        <div className="flex flex-wrap gap-1 mb-3">
           {post.tags.map((tag, tagIndex) => (
             <span
               key={tagIndex}

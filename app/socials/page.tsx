@@ -19,7 +19,11 @@ interface SocialLink {
 }
 
 const socialLinks: SocialLink[] = [
-  { name: "Email", icon: RiMailLine, href: "mailto:your.email@example.com" },
+  {
+    name: "Email",
+    icon: RiMailLine,
+    href: "mailto:yug.h.bhanushali1@gmail.com",
+  },
   {
     name: "Twitter",
     icon: RiTwitterXLine,
@@ -35,7 +39,7 @@ const socialLinks: SocialLink[] = [
     icon: RiGithubLine,
     href: "https://github.com/YugBhanushali",
   },
-  { name: "Resume", icon: RiFileTextLine, href: "/resume.pdf" },
+  { name: "Resume", icon: RiFileTextLine, href: "/resume/resume.pdf" },
 ];
 
 function SocialLinkItem({ link, index }: { link: SocialLink; index: number }) {
