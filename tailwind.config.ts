@@ -25,7 +25,7 @@ module.exports = {
           dark: "#1e1e1e", // Dark mode background for code
         },
       },
-      typography: (theme) => ({
+      typography: (theme: any) => ({
         DEFAULT: {
           css: {
             color: theme("colors.text.light"), // Default text color

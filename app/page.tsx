@@ -2,7 +2,7 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { Project, projects } from "./utils/constants";
-import { ProjectItem } from "./projects/page";
+import { ProjectItem } from "@/components/ProjectItem";
 
 export default function Home() {
   return (
