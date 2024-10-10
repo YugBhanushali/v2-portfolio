@@ -4,6 +4,8 @@ import {
   Space_Grotesk,
   Roboto_Mono,
   JetBrains_Mono,
+  Work_Sans,
+  Source_Code_Pro,
 } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "../components/theme-provider";
@@ -11,18 +13,17 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Metadata } from "next";
 
-const inter = Roboto_Mono({
+const inter = Source_Code_Pro({
   subsets: ["latin"],
   weight: ["400", "700", "300", "500", "600"],
 });
 
 export const metadata: Metadata = {
   title: "Yug Bhanushali",
-  description: "Building innovative solutions and exploring new technologies.",
+  description: "Building stuff people want.",
   openGraph: {
     title: "Yug Bhanushali",
-    description:
-      "Building innovative solutions and exploring new technologies.",
+    description: "Building stuff people want.",
     url: "https://yugbhanushali.com",
     siteName: "Yug Bhanushali",
     locale: "en_US",

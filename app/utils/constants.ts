@@ -4,7 +4,6 @@ import {
   RiLinkedinLine,
   RiGithubLine,
   RiFileTextLine,
-  RiExternalLinkLine,
 } from "react-icons/ri";
 
 export interface Project {
@@ -24,6 +23,23 @@ export interface BlogPost {
   readTime: string;
   author: string;
   link: string;
+}
+
+export interface WorkExperience {
+  company: string;
+  role: string;
+  description: string;
+  websiteLink: string;
+  endDate: string | null;
+  startDate: string;
+  currentlyWorking: boolean;
+  technologies: string[];
+}
+
+export interface SocialLink {
+  name: string;
+  icon: React.ElementType;
+  href: string;
 }
 
 export const projects: Project[] = [
@@ -91,17 +107,6 @@ export const projects: Project[] = [
     githubLink: "https://github.com/your-username/zipurl",
   },
 ];
-
-export interface WorkExperience {
-  company: string;
-  role: string;
-  description: string;
-  websiteLink: string;
-  endDate: string | null;
-  startDate: string;
-  currentlyWorking: boolean;
-  technologies: string[];
-}
 
 export const workExperiences: WorkExperience[] = [
   {
@@ -176,12 +181,6 @@ export const skills = [
   "Linux",
   "OOP",
 ];
-
-export interface SocialLink {
-  name: string;
-  icon: React.ElementType;
-  href: string;
-}
 
 export const socialLinks: SocialLink[] = [
   {

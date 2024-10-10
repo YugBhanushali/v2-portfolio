@@ -2,20 +2,8 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-
-import { Metadata } from "next";
 import { SocialLink, socialLinks } from "../utils/constants";
 import { RiExternalLinkLine } from "react-icons/ri";
-
-export const metadata: Metadata = {
-  title: "Socials - Yug Bhanushali",
-  description: "Connect with me on my social media platforms.",
-  openGraph: {
-    title: "Socials - Yug Bhanushali",
-    description: "Connect with me on my social media platforms.",
-    url: "https://yugbhanushali.com/socials",
-  },
-};
 
 function SocialLinkItem({ link, index }: { link: SocialLink; index: number }) {
   return (
@@ -30,9 +18,6 @@ function SocialLinkItem({ link, index }: { link: SocialLink; index: number }) {
         <link.icon className="text-gray-600 dark:text-gray-400 text-lg" />
         <span className="">{link.name}</span>
       </h3>
-      {/* <p className="text-gray-500 text-xsm mb-2 dark:text-gray-400 text-sm">
-        Connect with me on {link.name}
-      </p> */}
       <div className="flex gap-4">
         <motion.a
           href={link.href}
