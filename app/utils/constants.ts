@@ -113,10 +113,7 @@ export const workExperiences: WorkExperience[] = [
     company: "Tracks and Towers Pvt Ltd",
     role: "Full Stack Developer Intern",
     description: `
-      Building scalable REST APIs with TypeScript and Node.js, integrating with Supabase (PostgreSQL).
-Developing efficient UIs using Next.js, Shadcn, and Prisma, improving user experience by 40%.
-Managing VPS hosting and Dockerizing apps, ensuring 98% uptime.
-Implementing CI/CD workflows, improving deployment speed by 70%.
+      Building scalable backend systems and managing deployments, with occasional frontend development.
     `,
     websiteLink: "https://tracksandtowers.com",
     startDate: "March 2024",
@@ -140,9 +137,7 @@ Implementing CI/CD workflows, improving deployment speed by 70%.
     company: "Healiom Inc",
     role: "Frontend Developer Intern",
     description: `
-      Developed patient portal using React.js, Redux, and Shadcn UI.
-      Integrated GetStream SDK for real-time chat.
-      Built responsive front-end components for high performance.
+      Worked on developing and improving the patient portal.
     `,
     websiteLink: "https://healiom.com",
     startDate: "March 2024",
@@ -157,7 +152,6 @@ Implementing CI/CD workflows, improving deployment speed by 70%.
     ],
   },
 ];
-
 export const skills = [
   "JavaScript",
   "TypeScript",
