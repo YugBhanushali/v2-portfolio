@@ -143,7 +143,7 @@ export const workExperiences: WorkExperience[] = [
   },
   {
     company: "Healiom Inc",
-    role: "Frontend Developer Intern",
+    role: "Frontend Development Intern",
     description: `
       Worked on developing and improving the patient portal.
     `,

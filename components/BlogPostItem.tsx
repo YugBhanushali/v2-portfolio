@@ -37,7 +37,7 @@ export default function BlogPostItem({
       <Link href={post.link} className="block group">
         <h3 className="text-base sm:text-lg font-semibold mb-2 flex items-center gap-2 text-gray-800 dark:text-gray-200 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-200">
           <RiBookOpenLine
-            className="text-gray-400 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-200 text-2xl sm:text-lg"
+            className="text-gray-600 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-200 text-2xl sm:text-lg"
             aria-hidden="true"
           />
           <span>{post.title}</span>

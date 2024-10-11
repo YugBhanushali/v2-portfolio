@@ -11,6 +11,7 @@ import {
   RiBookOpenLine,
   RiLinkM,
   RiSquareLine,
+  RiBallPenLine,
 } from "react-icons/ri";
 
 export default function Footer() {
@@ -22,7 +23,7 @@ export default function Footer() {
     { href: "/", icon: RiSquareLine, label: "Home" },
     { href: "/projects", icon: RiFolder2Line, label: "Projects" },
     { href: "/work", icon: RiBriefcase2Line, label: "Work" },
-    { href: "/blogs", icon: RiBookOpenLine, label: "Blogs" },
+    { href: "/blogs", icon: RiBallPenLine, label: "Blogs" },
     { href: "/socials", icon: RiLinkM, label: "Socials" },
   ];
 
