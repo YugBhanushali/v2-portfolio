@@ -75,12 +75,20 @@ export const projects: Project[] = [
     githubLink: "https://github.com/supabase/supabase/pull/18302",
   },
   {
-    title: "Event Hub",
+    title: "Git Fetch Pro",
     description:
-      "Engineered a student event platform with secure club sign-in and intuitive event management features, including a card-based UI for event highlighting.",
-    technologies: ["React.js", "Node.js", "MongoDB", "Express.js"],
-    liveLink: "hhttps://eventhubs.vercel.app/",
-    githubLink: "https://github.com/YugBhanushali/Event-Hub-Frontend",
+      "An npm package that allows users to easily download specific subfolders from GitHub repositories, offering both a user-friendly interface and a CLI tool for advanced usage. Users can download only what they need without cloning the entire repository.",
+    technologies: ["TypeScript", "Node.js", "NPM"],
+    liveLink: "https://gitfetchpro.vercel.app/", // You can add the live link here if available
+    githubLink: "https://github.com/YugBhanushali/git-fetch-pro", // Replace with the GitHub repo link
+  },
+  {
+    title: "ZipURL",
+    description:
+      "URL shortening service with customizable links, link management, click analytics, and QR code generation for easy sharing.",
+    technologies: ["Next.js", "TypeScript", "PostgreSQL"],
+    liveLink: "https://zipurl.vercel.app/",
+    githubLink: "https://github.com/YugBhanushali/ZipURL",
   },
   {
     title: "KeyBeats",
@@ -99,19 +107,19 @@ export const projects: Project[] = [
     githubLink: "https://github.com/YugBhanushali/webwall",
   },
   {
-    title: "ZipURL",
+    title: "Event Hub",
     description:
-      "URL shortening service with customizable links, link management, click analytics, and QR code generation for easy sharing.",
-    technologies: ["Next.js", "TypeScript", "PostgreSQL"],
-    liveLink: "https://zipurl.vercel.app/",
-    githubLink: "https://github.com/YugBhanushali/ZipURL",
+      "Engineered a student event platform with secure club sign-in and intuitive event management features, including a card-based UI for event highlighting.",
+    technologies: ["React.js", "Node.js", "MongoDB", "Express.js"],
+    liveLink: "hhttps://eventhubs.vercel.app/",
+    githubLink: "https://github.com/YugBhanushali/Event-Hub-Frontend",
   },
 ];
 
 export const workExperiences: WorkExperience[] = [
   {
     company: "Tracks and Towers Pvt Ltd",
-    role: "Full Stack Developer Intern",
+    role: "Founding Engineer",
     description: `
       Building scalable backend systems and managing deployments, with occasional frontend development.
     `,

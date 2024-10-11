@@ -12,6 +12,7 @@ import { ThemeProvider } from "../components/theme-provider";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Metadata } from "next";
+import { Analytics } from "@vercel/analytics/react";
 import { GeistMono } from "geist/font";
 
 const inter = Source_Code_Pro({
@@ -62,6 +63,7 @@ export default function RootLayout({
               <Footer />
             </div>
           </main>
+          <Analytics />
         </ThemeProvider>
       </body>
     </html>
