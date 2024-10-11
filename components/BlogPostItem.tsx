@@ -42,7 +42,7 @@ export default function BlogPostItem({
           />
           <span>{post.title}</span>
         </h3>
-        <p className="text-xs md:text-sm  text-gray-600 dark:text-gray-400 mb-3">
+        <p className="text-xs md:text-sm text-gray-600 dark:text-gray-400 mb-3">
           {post.description}
         </p>
         <div className="flex flex-wrap gap-1 mb-3">
