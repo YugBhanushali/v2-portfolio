@@ -63,8 +63,8 @@ export default function RootLayout({
               <Footer />
             </div>
           </main>
-          <Analytics />
         </ThemeProvider>
+        <Analytics />
       </body>
     </html>
   );
