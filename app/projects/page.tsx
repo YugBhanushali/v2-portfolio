@@ -9,6 +9,7 @@ export const metadata: Metadata = {
     title: "Projects - Yug Bhanushali",
     description: "Explore my projects and contributions.",
     url: "https://yugbhanushali.com/projects",
+    images: "https://yugbhanushali.com/api/og?type=Projects",
   },
 };
 

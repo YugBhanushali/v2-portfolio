@@ -23,10 +23,15 @@ const inter = Source_Code_Pro({
 export const metadata: Metadata = {
   title: "Yug Bhanushali",
   description: "Building stuff people want.",
+  icons: {
+    icon: "/icon.png", // for favicon.ico in public folder
+    shortcut: "/icon.png",
+  },
   openGraph: {
     title: "Yug Bhanushali",
     description: "Building stuff people want.",
     url: "https://yugbhanushali.com",
+    images: "https://yugbhanushali.com/api/og",
     siteName: "Yug Bhanushali",
     locale: "en_US",
     type: "website",
@@ -34,9 +39,8 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Yug Bhanushali",
-    description:
-      "Building innovative solutions and exploring new technologies.",
-    site: "@yourtwitterhandle",
+    description: "Building stuff people want..",
+    site: "@TheYug03",
   },
 };
 

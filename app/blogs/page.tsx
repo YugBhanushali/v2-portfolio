@@ -14,6 +14,7 @@ export const metadata: Metadata = {
     description:
       "Read my latest blogs and articles on technology and development.",
     url: "https://yugbhanushali.com/blogs",
+    images: "https://yugbhanushali.com/api/og?type=Blogs",
   },
 };
 

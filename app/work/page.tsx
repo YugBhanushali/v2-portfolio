@@ -11,6 +11,7 @@ export const metadata: Metadata = {
     description:
       "Discover my work experience and the companies I've collaborated with.",
     url: "https://yugbhanushali.com/work",
+    images: "https://yugbhanushali.com/api/og?type=Work",
   },
 };
 
