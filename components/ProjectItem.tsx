@@ -41,7 +41,7 @@ export function ProjectItem({
           href={project.liveLink}
           target="_blank"
           rel="noopener noreferrer"
-          className="flex items-center text-gray-400 hover:text-gray-300"
+          className="flex items-center text-gray-400 hover:text-gray-500"
           whileHover={{ scale: 1.1 }}
         >
           <RiExternalLinkLine />
@@ -50,7 +50,7 @@ export function ProjectItem({
           href={project.githubLink}
           target="_blank"
           rel="noopener noreferrer"
-          className="flex items-center text-gray-400 hover:text-gray-300"
+          className="flex items-center text-gray-400 hover:text-gray-500"
           whileHover={{ scale: 1.1 }}
         >
           <TbBrandGithub />

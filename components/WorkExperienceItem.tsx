@@ -61,7 +61,7 @@ export function WorkExperienceItem({
         href={experience.websiteLink}
         target="_blank"
         rel="noopener noreferrer"
-        className="flex items-center text-gray-400 hover:text-gray-300 text-xs md:text-sm"
+        className="flex items-center text-gray-400 hover:text-gray-500 text-xs md:text-sm"
         whileHover={{ scale: 1.01 }}
       >
         <RiExternalLinkLine className="mr-1" />
