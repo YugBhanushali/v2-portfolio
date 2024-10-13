@@ -4,6 +4,7 @@ import {
   RiLinkedinLine,
   RiGithubLine,
   RiFileTextLine,
+  RiGitRepositoryLine,
 } from "react-icons/ri";
 
 export interface Project {
@@ -206,4 +207,9 @@ export const socialLinks: SocialLink[] = [
     href: "https://github.com/YugBhanushali",
   },
   { name: "Resume", icon: RiFileTextLine, href: "/resume/resume.pdf" },
+  {
+    name: "Repository",
+    icon: RiGitRepositoryLine, // You can choose a suitable icon
+    href: "https://github.com/YugBhanushali/v2-portfolio", // Replace with your repo link
+  },
 ];

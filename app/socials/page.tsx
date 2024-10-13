@@ -23,7 +23,7 @@ function SocialLinkItem({ link, index }: { link: SocialLink; index: number }) {
           href={link.href}
           target="_blank"
           rel="noopener noreferrer"
-          className="flex items-center text-gray-400 hover:text-gray-300"
+          className="flex items-center text-gray-400 hover:text-gray-500"
           whileHover={{ scale: 1.1 }}
         >
           <RiExternalLinkLine />

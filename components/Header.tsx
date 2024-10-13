@@ -5,6 +5,7 @@ import React, { useEffect, useState } from "react";
 import { useTheme } from "next-themes";
 import { usePathname } from "next/navigation";
 import { RiSunLine, RiMoonLine } from "react-icons/ri";
+import { FaCircle } from "react-icons/fa";
 
 export default function Header() {
   const [currentTime, setCurrentTime] = useState(new Date());
@@ -79,21 +80,23 @@ export default function Header() {
             ))}
           </ul>
         </nav>
-        <div className="flex items-center space-x-2 sm:space-x-4">
+        <div className="flex items-center space-x-0 sm:space-x-4">
           <button
             onClick={() => {
               setTheme(darkMode ? "light" : "dark");
               setDarkMode(!darkMode);
             }}
-            className="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors duration-300"
+            className="p-2 rounded-full  transition-colors duration-300"
             aria-label={
               darkMode ? "Switch to light mode" : "Switch to dark mode"
             }
           >
             {darkMode ? (
-              <RiSunLine className="w-4 h-4 sm:w-5 sm:h-5" />
+              // <RiSunLine className="w-4 h-4 sm:w-5 sm:h-5" />
+              <FaCircle className="w-4 h-4 sm:w-4 sm:h-4 text-white" />
             ) : (
-              <RiMoonLine className="w-4 h-4 sm:w-5 sm:h-5" />
+              // <RiMoonLine className="w-4 h-4 sm:w-5 sm:h-5" />
+              <FaCircle className="w-4 h-4 sm:w-4 sm:h-4 text-black" />
             )}
           </button>
           <div className="text-sm sm:text-base" suppressHydrationWarning>
