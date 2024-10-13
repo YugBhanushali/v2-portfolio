@@ -24,7 +24,7 @@ export const metadata: Metadata = {
   title: "Yug Bhanushali",
   description: "Building stuff people want.",
   icons: {
-    icon: "/icon.png", // for favicon.ico in public folder
+    icon: "/icon.png",
     shortcut: "/icon.png",
   },
   openGraph: {

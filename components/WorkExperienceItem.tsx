@@ -11,7 +11,8 @@ export function WorkExperienceItem({
   index: number;
 }) {
   const formatDate = (dateString: string) => {
-    const date = new Date(dateString);
+    const [month, year] = dateString.split(" ");
+    const date = new Date(`${month} 1, ${year}`);
     return date.toLocaleDateString("en-US", {
       year: "numeric",
       month: "short",
