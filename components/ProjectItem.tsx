@@ -3,6 +3,7 @@ import { RiExternalLinkLine, RiFolder2Line } from "react-icons/ri";
 import { TbBrandGithub } from "react-icons/tb";
 import { motion } from "framer-motion";
 import { Project } from "@/app/utils/constants";
+import Link from "next/link";
 
 export function ProjectItem({
   project,
@@ -14,14 +15,16 @@ export function ProjectItem({
   return (
     <motion.div
       className="mb-4 pb-6"
-      initial={{ opacity: 0, y: 20 }}
+      initial={{ opacity: 0, y: 0 }}
       animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.3, delay: index * 0.1 }}
-      whileHover={{ x: 5 }}
+      transition={{ duration: 0.2, delay: index * 0.1 }}
+      // whileHover={{ x: 5 }}
     >
-      <h3 className="text-sm font-semibold mb-0 flex items-center gap-2">
+      <h3 className="text-sm font-semibold mb-1 flex items-center gap-2">
         <RiFolder2Line className="text-gray-600 dark:text-gray-400 text-lg" />
-        <span className="underline underline-offset-2">{project.title}</span>
+        <Link href={project.liveLink}>
+          <span className="underline underline-offset-2">{project.title}</span>
+        </Link>
       </h3>
       <p className="text-gray-500 text-xs md:text-sm mb-2 dark:text-gray-400">
         {project.description}
@@ -41,7 +44,7 @@ export function ProjectItem({
           href={project.liveLink}
           target="_blank"
           rel="noopener noreferrer"
-          className="flex items-center text-gray-400 hover:text-gray-500"
+          className="flex items-center text-gray-500 dark:text-gray-400 dark:hover:text-gray-300 hover:text-gray-600"
           whileHover={{ scale: 1.1 }}
         >
           <RiExternalLinkLine />
@@ -50,7 +53,7 @@ export function ProjectItem({
           href={project.githubLink}
           target="_blank"
           rel="noopener noreferrer"
-          className="flex items-center text-gray-400 hover:text-gray-500"
+          className="flex items-center text-gray-500 dark:text-gray-400 dark:hover:text-gray-300 hover:text-gray-600"
           whileHover={{ scale: 1.1 }}
         >
           <TbBrandGithub />

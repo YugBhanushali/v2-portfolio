@@ -30,7 +30,6 @@ export default function Home() {
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.2, delay: index * 0.03 }}
-                whileHover={{ scale: 1.05 }}
               >
                 {skill}
               </motion.span>

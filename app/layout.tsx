@@ -14,6 +14,7 @@ import Footer from "@/components/Footer";
 import { Metadata } from "next";
 import { Analytics } from "@vercel/analytics/react";
 import { GeistMono } from "geist/font";
+import Script from "next/script";
 
 const inter = Source_Code_Pro({
   subsets: ["latin"],
@@ -52,6 +53,11 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={GeistMono.className}>
+        <Script
+          src="https://beamanalytics.b-cdn.net/beam.min.js"
+          data-token="f2a5edb6-fb10-47ad-855b-6e55cda1e11c"
+          async
+        />
         <ThemeProvider
           attribute="class"
           defaultTheme="light"

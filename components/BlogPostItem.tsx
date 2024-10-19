@@ -29,10 +29,9 @@ export default function BlogPostItem({
   return (
     <motion.div
       className="mb-6 pb-6 border-b border-gray-200 dark:border-gray-700 last:border-b-0 sm:mb-8 sm:pb-8"
-      initial={{ opacity: 0, y: 20 }}
+      initial={{ opacity: 0, y: 0 }}
       animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.3, delay: index * 0.1 }}
-      whileHover={{ x: 5 }}
+      transition={{ duration: 0.2, delay: index * 0.1 }}
     >
       <Link href={post.link} className="block group">
         <h3 className="text-base sm:text-lg font-semibold mb-2 flex items-center gap-2 text-gray-800 dark:text-gray-200 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors duration-200">
