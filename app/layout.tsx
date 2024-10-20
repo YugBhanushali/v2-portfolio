@@ -53,11 +53,11 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={GeistMono.className}>
-        <Script
+        {/* <Script
           src="https://beamanalytics.b-cdn.net/beam.min.js"
           data-token={process.env.ANALYTICS}
           async
-        />
+        /> */}
         <ThemeProvider
           attribute="class"
           defaultTheme="light"
