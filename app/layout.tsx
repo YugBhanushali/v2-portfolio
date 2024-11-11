@@ -53,11 +53,11 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={GeistMono.className}>
-        <script
+        <Script
           defer
           src={process.env.ANALYTICS_URL}
           data-website-id={process.env.ANALYTICS}
-        ></script>
+        ></Script>
         <ThemeProvider
           attribute="class"
           defaultTheme="light"
