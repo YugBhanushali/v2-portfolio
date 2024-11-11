@@ -14,7 +14,6 @@ import Footer from "@/components/Footer";
 import { Metadata } from "next";
 import { Analytics } from "@vercel/analytics/react";
 import { GeistMono } from "geist/font";
-import Script from "next/script";
 
 const inter = Source_Code_Pro({
   subsets: ["latin"],
@@ -52,6 +51,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
+      <head>
+        <script
+          defer
+          src={process.env.NEXT_PUBLIC_UMAMI_SCRIPT_URL}
+          data-website-id={process.env.NEXT_PUBLIC_UMAMI_WEBSITE_ID}
+        ></script>
+      </head>
       <body className={GeistMono.className}>
         <ThemeProvider
           attribute="class"
@@ -71,11 +77,6 @@ export default function RootLayout({
         </ThemeProvider>
         <Analytics />
       </body>
-      <Script
-        defer
-        src={process.env.ANALYTICS_URL}
-        data-website-id={process.env.ANALYTICS}
-      ></Script>
     </html>
   );
 }
