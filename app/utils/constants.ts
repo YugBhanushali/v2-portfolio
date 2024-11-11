@@ -96,7 +96,7 @@ export const projects: Project[] = [
     description:
       "Realistic mechanical keyboard sounds with 13 different switch profiles. A menubar application with adjustable volume control and an easy-to-use interface.",
     technologies: ["Electron.js", "JavaScript"],
-    liveLink: "https://github.com/YugBhanushali/keyBeats/releases/tag/1.1.3",
+    liveLink: "https://keybeats.yugbhanushali.com/",
     githubLink: "https://github.com/YugBhanushali/keyBeats",
   },
   {
