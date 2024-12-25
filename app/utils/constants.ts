@@ -126,8 +126,8 @@ export const workExperiences: WorkExperience[] = [
     `,
     websiteLink: "https://tracksandtowers.com",
     startDate: "March 2024",
-    endDate: null,
-    currentlyWorking: true,
+    endDate: "December 2024",
+    currentlyWorking: false,
     technologies: [
       "TypeScript",
       "Node.js",
@@ -140,6 +140,8 @@ export const workExperiences: WorkExperience[] = [
       "VPS",
       "Docker",
       "CI/CD",
+      "Grafana",
+      "Prometheus",
     ],
   },
   {
@@ -206,7 +208,7 @@ export const socialLinks: SocialLink[] = [
     icon: RiGithubLine,
     href: "https://github.com/YugBhanushali",
   },
-  { name: "Resume", icon: RiFileTextLine, href: "/resume/resume.pdf" },
+  { name: "Resume", icon: RiFileTextLine, href: "/resume/Yug-Bhanushali.pdf" },
   {
     name: "Repository",
     icon: RiGitRepositoryLine, // You can choose a suitable icon

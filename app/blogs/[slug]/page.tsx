@@ -2,12 +2,13 @@ import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
 import React from "react";
-import { RiCalendarLine, RiTimeLine, RiUser3Line } from "react-icons/ri";
+import { RiCalendarLine, RiTimeLine } from "react-icons/ri";
 import { unified } from "unified";
 import remarkParse from "remark-parse";
 import remarkRehype from "remark-rehype";
 import rehypeStringify from "rehype-stringify";
 import rehypePrettyCode from "rehype-pretty-code";
+import BlogEndSection from "@/components/BlogPostEnd";
 
 // Utility function to get all blog posts metadata
 const getBlogPosts = () => {
@@ -91,21 +92,7 @@ const BlogPage = async ({ params }: { params: { slug: string } }) => {
         dangerouslySetInnerHTML={{ __html: renderedContent }}
       ></article>
 
-      {/* Suggested Posts Section */}
-      {/* {suggestedPosts.length > 0 && (
-        <div className="mt-10">
-          <h3 className="text-xl font-semibold">Related Posts</h3>
-          <ul className="list-disc ml-5 mt-3">
-            {suggestedPosts.map((post) => (
-              <li key={post.slug}>
-                <a href={`/blogs/${post.slug}`} className="text-blue-500">
-                  {post.title}
-                </a>
-              </li>
-            ))}
-          </ul>
-        </div>
-      )} */}
+      <BlogEndSection />
     </div>
   );
 };
