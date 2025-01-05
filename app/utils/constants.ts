@@ -68,12 +68,12 @@ export const projects: Project[] = [
     githubLink: "https://github.com/YugBhanushali/code-to-image",
   },
   {
-    title: "Supabase Contribution",
+    title: "KeyBeats",
     description:
-      "Fixed a critical bug in Supabase documentation, improving the app's stability and preventing crashes when hovering over search results containing quotes.",
-    technologies: ["TypeScript", "React.js"],
-    liveLink: "https://supabase.com",
-    githubLink: "https://github.com/supabase/supabase/pull/18302",
+      "Realistic mechanical keyboard sounds with 13 different switch profiles. A menubar application with adjustable volume control and an easy-to-use interface.",
+    technologies: ["Electron.js", "JavaScript"],
+    liveLink: "https://keybeats.yugbhanushali.com/",
+    githubLink: "https://github.com/YugBhanushali/keyBeats",
   },
   {
     title: "Git Fetch Pro",
@@ -92,20 +92,20 @@ export const projects: Project[] = [
     githubLink: "https://github.com/YugBhanushali/ZipURL",
   },
   {
-    title: "KeyBeats",
-    description:
-      "Realistic mechanical keyboard sounds with 13 different switch profiles. A menubar application with adjustable volume control and an easy-to-use interface.",
-    technologies: ["Electron.js", "JavaScript"],
-    liveLink: "https://keybeats.yugbhanushali.com/",
-    githubLink: "https://github.com/YugBhanushali/keyBeats",
-  },
-  {
     title: "WebWall",
     description:
       "Command-line tool to block and unblock websites by modifying the hosts file, providing efficient website access management.",
     technologies: ["JavaScript", "npm-package"],
     liveLink: "https://www.npmjs.com/package/webwall",
     githubLink: "https://github.com/YugBhanushali/webwall",
+  },
+  {
+    title: "Supabase Contribution",
+    description:
+      "Fixed a critical bug in Supabase Website, improving the app's stability and preventing crashes when hovering over search results containing quotes.",
+    technologies: ["TypeScript", "React.js"],
+    liveLink: "https://supabase.com",
+    githubLink: "https://github.com/supabase/supabase/pull/18302",
   },
   {
     title: "Event Hub",
