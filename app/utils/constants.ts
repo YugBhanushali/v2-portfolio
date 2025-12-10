@@ -119,6 +119,48 @@ export const projects: Project[] = [
 
 export const workExperiences: WorkExperience[] = [
   {
+    company: "JP Morgan Chase & Co.",
+    role: "Software Engineer I",
+    description: `
+      Building scalable backend systems and managing deployments, with occasional frontend development.
+    `,
+    websiteLink: "https://www.jpmorganchase.com/",
+    startDate: "Feb 2025",
+    endDate: "",
+    currentlyWorking: true,
+    technologies: [
+      "Java",
+      "React",
+      "Terraform",
+      "Jules",
+      "Jenkins",
+      "AWS",
+      "Docker",
+      "CI/CD",
+    ],
+  },
+  {
+    company: "JP Morgan Chase & Co.",
+    role: "Software Engineer Intern",
+    description: `
+      Building scalable backend systems and managing deployments, with occasional frontend development.
+    `,
+    websiteLink: "https://www.jpmorganchase.com/",
+    startDate: "Feb 2025",
+    endDate: "June 2025",
+    currentlyWorking: false,
+    technologies: [
+      "Java",
+      "React",
+      "Terraform",
+      "Jules",
+      "Jenkins",
+      "AWS",
+      "Docker",
+      "CI/CD",
+    ],
+  },
+  {
     company: "Tracks and Towers Pvt Ltd",
     role: "Founding Engineer",
     description: `
