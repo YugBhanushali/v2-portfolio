@@ -122,7 +122,7 @@ export const workExperiences: WorkExperience[] = [
     company: "JP Morgan Chase & Co.",
     role: "Software Engineer I",
     description: `
-      Building scalable backend systems and managing deployments, with occasional frontend development.
+      Building backend and infrastructure, managing deployments and CI/CD; contribute to frontend and exploring AI.
     `,
     websiteLink: "https://www.jpmorganchase.com/",
     startDate: "Feb 2025",
@@ -143,7 +143,7 @@ export const workExperiences: WorkExperience[] = [
     company: "JP Morgan Chase & Co.",
     role: "Software Engineer Intern",
     description: `
-      Building scalable backend systems and managing deployments, with occasional frontend development.
+      Building backend and infrastructure, managing deployments and CI/CD; contribute to frontend and exploring AI.
     `,
     websiteLink: "https://www.jpmorganchase.com/",
     startDate: "Feb 2025",
